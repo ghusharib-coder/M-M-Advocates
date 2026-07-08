@@ -36,8 +36,8 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="w-full px-8 sm:px-12 lg:px-16">
-        <div className="flex justify-between items-center sm:h-16 lg:h-20">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 w-full items-center justify-between gap-4 sm:h-20">
           {/* Logo */}
           <Link to="/">
             <motion.div
@@ -63,15 +63,14 @@ export default function Navbar() {
           </div>
 
           {/* Desktop CTA */}
-          <Link to="/consultation">
-            <motion.button
-              className="hidden md:block gradient-btn glow-btn"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+          <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+            <Link
+              to="/consultation"
+              className="hidden md:inline-flex items-center justify-center whitespace-nowrap rounded-lg px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-[#5c4033]/25 transition-all duration-300 gradient-btn glow-btn"
             >
               <span>Book Consultation</span>
-            </motion.button>
-          </Link>
+            </Link>
+          </motion.div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -105,7 +104,7 @@ export default function Navbar() {
               </Link>
             ))}
             <motion.button
-              className="w-full gradient-btn mt-4"
+              className="w-full gradient-btn text-sm"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
